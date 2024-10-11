@@ -17,8 +17,7 @@ function Http() {
     config => {
       var userToken = window.sessionStorage.getItem('userToken')
       if (userToken) {
-        let token = userToken
-        config.headers.token = token
+        config.headers.authorization = userToken
       }
       return config
     }
