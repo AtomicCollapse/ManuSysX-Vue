@@ -1,4 +1,4 @@
-# music_forum_frt
+# manuxSys
 
 ## Project setup
 ```
