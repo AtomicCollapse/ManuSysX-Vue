@@ -2,7 +2,7 @@
  * Axios基础封装，提供了从env文件读取base请求路径功能，以及请求参数封装
  */
 import axios from 'axios'
-import { Message } from 'element-ui'
+// import { Message } from 'element-ui'
 
 function Http() {
   /**
@@ -43,8 +43,8 @@ function createInstance() {
       axios.get(url).then((response) => {
         resolve(response.data);
       }).catch(error => {
-        Message.error("网络请求失败")
-        Message.error(error)
+        this.$message.error("网络请求失败")
+        this.$message.error(error)
         reject(error);
       })
     })
@@ -55,8 +55,8 @@ function createInstance() {
       axios.post(url, params).then((response) => {
         resolve(response.data);
       }).catch(error => {
-        Message.error("网络请求失败")
-        Message.error(error)
+        this.$message.error("网络请求失败")
+        this.$message.error(error)
         reject(error);
       })
     })

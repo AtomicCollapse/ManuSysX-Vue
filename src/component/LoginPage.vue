@@ -1,13 +1,13 @@
 <template>
-    <el-container style="height: 100%;">
-        <router-view></router-view>
-    </el-container>
+    <section>
+        login
+    </section>
 </template>
-
 
 <script>
 export default {
-    
+    created(){
+    }
 }
 </script>
 
