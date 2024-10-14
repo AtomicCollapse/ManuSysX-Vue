@@ -17,7 +17,6 @@ export default {
         }
     },
     created(){
-        window.sessionStorage.setItem('userToken','Bearer 6ab58c47-f566-4f50-924f-4784e4c604bf')
         this.$http.get(this.ajaxUrl.list,{systemCode:'test1',taskCode:'test2'}).then(res => {
             // debugger
         })

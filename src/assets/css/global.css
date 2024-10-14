@@ -3,3 +3,14 @@ html,body,#app{
     padding: 0;
     margin: 0;
 }
+
+/**
+  element 样式穿透
+*/
+.el-menu-item,.el-menu-item i{
+    color: rgba(255, 255, 255, .5) !important;
+}
+
+.el-menu-item.is-active,.el-menu-item.is-active i{
+    color: white !important;
+}

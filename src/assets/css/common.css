@@ -1,0 +1,14 @@
+/**
+常用CSS样式封装
+*/
+
+
+/*
+上下左右居中盒子
+*/
+.common-center-box-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+}

@@ -9,7 +9,13 @@ module.exports = {
         pathRewrite: {},
         changeOrigin: true,
         target: 'http://localhost:48080',
-      }
+      },
+      '/api/pms': {
+        ws: false,
+        pathRewrite: {},
+        changeOrigin: true,
+        target: 'http://localhost:48080',
+      },
     }
   }
 }

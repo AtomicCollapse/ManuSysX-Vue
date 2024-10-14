@@ -2,7 +2,7 @@
  * Axios基础封装，提供了从env文件读取base请求路径功能，以及请求参数封装
  */
 import axios from 'axios'
-// import { Message } from 'element-ui'
+import { Message } from 'element-ui'
 
 function Http() {
   /**
@@ -15,9 +15,9 @@ function Http() {
   //请求前置拦截，请求头携带上登录用户信息
   axios.interceptors.request.use(
     config => {
-      var userToken = window.sessionStorage.getItem('userToken')
-      if (userToken) {
-        config.headers.authorization = userToken
+      var token = window.sessionStorage.getItem('token')
+      if (token) {
+        config.headers.authorization = token
       }
       return config
     }
@@ -43,8 +43,7 @@ function createInstance() {
       axios.get(url).then((response) => {
         resolve(response.data);
       }).catch(error => {
-        this.$message.error("网络请求失败")
-        this.$message.error(error)
+        Message.error('网络请求失败: '+error.message)
         reject(error);
       })
     })
@@ -55,8 +54,7 @@ function createInstance() {
       axios.post(url, params).then((response) => {
         resolve(response.data);
       }).catch(error => {
-        this.$message.error("网络请求失败")
-        this.$message.error(error)
+        Message.error('网络请求失败: '+error)
         reject(error);
       })
     })
