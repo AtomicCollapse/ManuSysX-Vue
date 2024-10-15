@@ -1,7 +1,7 @@
 <template>
   <section>
-    <div>
-        <el-button v-for="item in toolBarButtons" :key="item.code" @click="handleBtnClick(item.code)">
+    <div style="margin-bottom: 5px;">
+        <el-button v-for="item in toolBarButtons" :type="item.type" :round="item.round" :key="item.code" @click="handleBtnClick(item.code)">
             <span style="margin-right: 5px;"><i :class="item.icon"></i></span>
             <span>{{ item.name }}</span>
         </el-button>

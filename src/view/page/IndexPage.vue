@@ -5,7 +5,7 @@
     </el-aside>
 
     <el-container>
-      <el-header class="header">
+      <el-header style="box-shadow: 5px 1px 4px #ccc;">
         <div class="common-center-box-row" style="height: 100%;">
           <!-- 面包屑导航 -->
           <el-breadcrumb separator-class="el-icon-arrow-right">

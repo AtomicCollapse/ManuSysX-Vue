@@ -16,7 +16,7 @@ export default {
     //设置测试用token
     window.sessionStorage.setItem(
       'token',
-      '98997ed8-aeb0-4d90-8801-bfc724f60689'
+      '35e3c957-09c6-4081-8d36-2a625f35be5a'
     )
 
     //设置测试用菜单
