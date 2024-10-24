@@ -7,12 +7,20 @@
       </template>
     </el-menu-item>
 
-    <el-menu-item v-for="item in userMenus" :key="item.name" :index="item.path">
+    <!-- 一级菜单 -->
+    <el-submenu v-for="item in userMenus" :key="item.name" :index="item.path">
       <template slot="title">
         <i :class="item.icon"></i>
         <span>{{ item.name }}</span>
       </template>
-    </el-menu-item>
+      <!-- 二级菜单 -->
+      <el-menu-item v-for="subItem in item.sub" :key="subItem.title" :index="subItem.path">
+        <template slot="title">
+          <i :class="subItem.icon"></i>
+          <span>{{ subItem.name }}</span>
+        </template>
+      </el-menu-item>
+    </el-submenu>
   </el-menu>
 </template>
 

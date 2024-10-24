@@ -7,7 +7,7 @@ html,body,#app{
 /**
   element 样式穿透
 */
-.el-menu-item,.el-menu-item i{
+.el-submenu__title,.el-submenu__title i,.el-menu-item,.el-menu-item i{
     color: rgba(255, 255, 255, .5) !important;
 }
 

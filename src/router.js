@@ -4,7 +4,7 @@ import { Message } from 'element-ui'
 import Welcome from '@/view/welcome/Welcome.vue'
 import IndexPage from '@/view/page/IndexPage.vue'
 import LoginPage from '@/view/page/LoginPage.vue'
-import CodeGen from '@/view/system/codeGen/CodeGen.vue'
+import CgDataSourceList from '@/view/system/codeGen/CgDataSourceList.vue'
 
 Vue.use(Router)
 
@@ -27,7 +27,7 @@ const router = new Router({
             redirect: '/index/welcome',
             children: [
                 { path: '/index/welcome', name: Welcome.name, component: Welcome },
-                { path: '/system/codeGen', name: CodeGen.name, component: CodeGen },
+                { path: '/system/codeGen/dataSource', name: CgDataSourceList.name, component: CgDataSourceList },
             ]
         },
     ]

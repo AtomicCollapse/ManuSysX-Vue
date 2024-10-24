@@ -16,13 +16,32 @@ export default {
     //设置测试用token
     window.sessionStorage.setItem(
       'token',
-      '35e3c957-09c6-4081-8d36-2a625f35be5a'
+      '1f762ec9-9b8c-411d-8d58-7ab0527136cd'
     )
 
     //设置测试用菜单
-    window.sessionStorage.setItem('userMenus', JSON.stringify([
-      { name: '代码生成', path: '/system/codeGen',icon:'el-icon-ice-drink' }
-    ]))
+    window.sessionStorage.setItem(
+      'userMenus',
+      JSON.stringify([
+        {
+          name: '代码生成',
+          path: '/system/codeGen',
+          icon: 'el-icon-ice-drink',
+          sub: [
+            {
+              name: '数据源管理',
+              path: '/system/codeGen/dataSource',
+              icon: 'el-icon-ice-drink'
+            },
+            {
+              name: '项目管理',
+              path: '/system/codeGen/module',
+              icon: 'el-icon-ice-drink'
+            }
+          ]
+        }
+      ])
+    )
   },
   methods: {}
 }
